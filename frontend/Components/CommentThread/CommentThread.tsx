@@ -66,7 +66,7 @@ const LoadMoreComments: React.FC<LoadMoreCommentsProps> = ({
   const [loading, setLoading] = useState(false)
   const [comments, setComments] = useState<CommentConnection | undefined>()
   const [error, setError] = useState<ApolloError | undefined>()
-
+  const [, theme] = useStyletron()
   const onLoadAfter = (parentId: string, after: string) => {
     setLoading(true)
     client
@@ -93,11 +93,13 @@ const LoadMoreComments: React.FC<LoadMoreCommentsProps> = ({
   }
   if (comments) {
     return (
-      <CommentThread
-        parentId={parentId}
-        comments={comments}
-        isChild={isChild}
-      />
+      <Block paddingLeft={isChild ? theme.sizing.scale500 : 0}>
+        <CommentThread
+          parentId={parentId}
+          comments={comments}
+          isChild={isChild}
+        />
+      </Block>
     )
   }
   return (
