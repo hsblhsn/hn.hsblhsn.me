@@ -38,6 +38,8 @@ steps:
       - services
       - update-traffic
       - $_SERVICE_NAME
+      - '--platform=$_PLATFORM'
+      - '--region=$_DEPLOY_REGION'
       - '--to-tags=$SHORT_SHA=$_TRAFFIC_RATIO'
       - '--quiet'
     id: Serve
