@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"path"
 	"runtime/debug"
 	"syscall"
 
@@ -102,6 +103,11 @@ func pprofiler(logger *zap.Logger) {
 		Service:        svc,
 		ServiceVersion: rev,
 	}
+	logger.Info(
+		"main: starting profiler",
+		zap.String("service", cfg.Service),
+		zap.String("version", cfg.ServiceVersion),
+	)
 	if err := profiler.Start(cfg); err != nil {
 		logger.Error("main: could not start profiler", zap.Error(err))
 		return
@@ -109,9 +115,10 @@ func pprofiler(logger *zap.Logger) {
 }
 
 func parseBuildInfo() (svc, rev string) {
+	defaultMod := "hn.hsblhsn.me"
 	info, ok := debug.ReadBuildInfo()
 	if !ok {
-		return "github.com/hsblhsn/hn.hsblhsn.me", ""
+		return defaultMod, ""
 	}
 	svc = info.Main.Path
 	var (
@@ -132,6 +139,5 @@ func parseBuildInfo() (svc, rev string) {
 	if rev == "+" {
 		rev = "unknown"
 	}
-
-	return svc, rev
+	return path.Base(svc), rev
 }
