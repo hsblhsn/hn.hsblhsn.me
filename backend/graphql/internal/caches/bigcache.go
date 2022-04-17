@@ -8,7 +8,6 @@ import (
 
 const (
 	DefaultCacheExpiration = 10 * time.Minute
-	DefaultMaxCacheSizeMB  = 800
 )
 
 var _ Cache = (*bigcache.BigCache)(nil)
@@ -17,11 +16,14 @@ var _ Cache = (*bigcache.BigCache)(nil)
 // It uses bigcache as a backend.
 // It uses default cache expiration and max cache size.
 func NewInMemoryCache() *bigcache.BigCache {
-	const maxShard = 64
+	// these constants are here because they are bigcache specific.
+	const (
+		MaxShard              = 64
+		DefaultMaxCacheSizeMB = 800
+	)
 	cfg := bigcache.DefaultConfig(DefaultCacheExpiration)
-	cfg.Shards = maxShard
+	cfg.Shards = MaxShard
 	cfg.HardMaxCacheSize = DefaultMaxCacheSizeMB
-	cfg.MaxEntrySize = DefaultMaxEntrySize
 	cache, err := bigcache.NewBigCache(cfg)
 	if err != nil {
 		panic(err)
