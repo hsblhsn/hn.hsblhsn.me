@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.2.0...v1.2.1) (2022-04-17)
+
+
+### Bug Fixes
+
+* pprof uploader service name. ([#36](https://github.com/hsblhsn/hn.hsblhsn.me/issues/36)) ([9fab438](https://github.com/hsblhsn/hn.hsblhsn.me/commit/9fab4385b0b2369a3856e9acf9f083f02ba51271))
+
 ## [1.2.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.1.1...v1.2.0) (2022-04-17)
 
 
