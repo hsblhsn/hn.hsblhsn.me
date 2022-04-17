@@ -1,5 +1,5 @@
 #reader-view-content {
-  @apply text-lg font-sans mt-3 break-words;
+  @apply text-base font-sans mt-3 break-words;
 }
 
 #reader-view-content h1 {

@@ -27,38 +27,38 @@ const CommentThread: React.FC<CommentThreadProps> = ({
 
   const threadStyle = (child: boolean) => {
     return css({
-      paddingTop: child ? theme.sizing.scale600 : theme.sizing.scale300,
-      borderLeft: child ? `3px solid ${theme.colors.accent}` : 'none',
       paddingLeft: child ? theme.sizing.scale300 : theme.sizing.scale0,
+      borderLeft: child ? `3px solid ${theme.colors.accent}` : 'none',
     })
   }
   return (
-    <div>
-      <Block className={threadStyle(isChild)}>
-        {comments.edges.map(({ node }, index) => {
-          if (!node) {
-            // eslint-disable-next-line unicorn/no-null
-            return null
-          }
-          return <Comment comment={node} key={index} />
-        })}
-        {comments.pageInfo.hasNextPage && (
-          <LoadMoreComments
-            parentId={parentId}
-            after={comments.pageInfo.endCursor}
-          />
-        )}
-      </Block>
-    </div>
+    <Block className={threadStyle(isChild)}>
+      {comments.edges.map(({ node }, index) => {
+        if (!node) {
+          // eslint-disable-next-line unicorn/no-null
+          return null
+        }
+        return <Comment comment={node} key={index} />
+      })}
+      {comments.pageInfo.hasNextPage && (
+        <LoadMoreComments
+          isChild={isChild}
+          parentId={parentId}
+          after={comments.pageInfo.endCursor}
+        />
+      )}
+    </Block>
   )
 }
 
 interface LoadMoreCommentsProps {
   parentId: string
   after: string
+  isChild: boolean
 }
 
 const LoadMoreComments: React.FC<LoadMoreCommentsProps> = ({
+  isChild,
   parentId,
   after,
 }: LoadMoreCommentsProps) => {
@@ -92,7 +92,13 @@ const LoadMoreComments: React.FC<LoadMoreCommentsProps> = ({
       })
   }
   if (comments) {
-    return <CommentThread parentId={parentId} comments={comments} />
+    return (
+      <CommentThread
+        parentId={parentId}
+        comments={comments}
+        isChild={isChild}
+      />
+    )
   }
   return (
     <Button

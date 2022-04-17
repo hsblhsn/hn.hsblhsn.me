@@ -1,5 +1,5 @@
 .comment-reader-view-content {
-  @apply pl-3;
+  @apply text-base pl-2;
 }
 
 .comment-reader-view-content a {
