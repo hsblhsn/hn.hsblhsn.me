@@ -21,6 +21,7 @@ func NewInMemoryCache() *bigcache.BigCache {
 	cfg := bigcache.DefaultConfig(DefaultCacheExpiration)
 	cfg.Shards = maxShard
 	cfg.HardMaxCacheSize = DefaultMaxCacheSizeMB
+	cfg.MaxEntrySize = DefaultMaxEntrySize
 	cache, err := bigcache.NewBigCache(cfg)
 	if err != nil {
 		panic(err)
