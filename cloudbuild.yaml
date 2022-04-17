@@ -28,7 +28,7 @@ steps:
       - '--labels=commit-sha=$COMMIT_SHA,gcb-build-id=$BUILD_ID'
       - '--region=$_DEPLOY_REGION'
       - '--no-traffic'
-      - '--tag=$SHORT_SHA'
+      - '--tag=git$SHORT_SHA'
       - '--quiet'
     id: Deploy
     entrypoint: gcloud
@@ -40,7 +40,7 @@ steps:
       - $_SERVICE_NAME
       - '--platform=$_PLATFORM'
       - '--region=$_DEPLOY_REGION'
-      - '--to-tags=$SHORT_SHA=$_TRAFFIC_RATIO'
+      - '--to-tags=git$SHORT_SHA=$_TRAFFIC_RATIO'
       - '--quiet'
     id: Serve
     entrypoint: gcloud
