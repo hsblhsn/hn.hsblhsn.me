@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.1.0...v1.1.1) (2022-04-17)
+
+
+### Bug Fixes
+
+* broken comment border. ([#32](https://github.com/hsblhsn/hn.hsblhsn.me/issues/32)) ([f6717c5](https://github.com/hsblhsn/hn.hsblhsn.me/commit/f6717c58a52fe92d1e4c2b44a8ca5dcf1a9052b4)), closes [#31](https://github.com/hsblhsn/hn.hsblhsn.me/issues/31)
+
 ## [1.1.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.0.0...v1.1.0) (2022-04-17)
 
 
