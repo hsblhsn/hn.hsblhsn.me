@@ -2,11 +2,14 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"net/http"
 	"os"
 	"os/signal"
+	"runtime/debug"
 	"syscall"
 
+	"cloud.google.com/go/profiler"
 	"github.com/blendle/zapdriver"
 	"github.com/gorilla/mux"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend"
@@ -26,6 +29,7 @@ func main() {
 		backend.Module(),
 		frontend.Module(),
 		fx.Invoke(httpServer),
+		fx.Invoke(pprofiler),
 	)
 	app.Run()
 }
@@ -90,4 +94,44 @@ func httpServer(
 		OnStart: OnStart,
 		OnStop:  OnStop,
 	})
+}
+
+func pprofiler(logger *zap.Logger) {
+	svc, rev := parseBuildInfo()
+	cfg := profiler.Config{
+		Service:        svc,
+		ServiceVersion: rev,
+	}
+	if err := profiler.Start(cfg); err != nil {
+		logger.Error("main: could not start profiler", zap.Error(err))
+		return
+	}
+}
+
+func parseBuildInfo() (svc, rev string) {
+	info, ok := debug.ReadBuildInfo()
+	if !ok {
+		return "github.com/hsblhsn/hn.hsblhsn.me", ""
+	}
+	svc = info.Main.Path
+	var (
+		commit string
+		dirty  string
+	)
+	for _, v := range info.Settings {
+		switch v.Key {
+		case "vcs.revision":
+			commit = v.Value[len(v.Value)-8:]
+		case "vcs.modified":
+			if v.Value == "true" {
+				dirty = " (dirty)"
+			}
+		}
+	}
+	rev = fmt.Sprintf("%s+%s", commit, dirty)
+	if rev == "+" {
+		rev = "unknown"
+	}
+
+	return svc, rev
 }
