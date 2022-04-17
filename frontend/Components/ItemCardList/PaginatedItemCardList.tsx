@@ -6,13 +6,26 @@ interface PaginatedItemCardListProps {
   items: ConnectionT<Story | Job>
   loading: boolean
   loadNext: () => void
+  nextPageUrl: string
 }
 
 const PaginatedItemCardList: React.FC<PaginatedItemCardListProps> = ({
   items,
   loading,
   loadNext,
+  nextPageUrl,
 }: PaginatedItemCardListProps) => {
+  const linkToNextPage = (
+    <a
+      href={nextPageUrl}
+      onClick={(e) => {
+        e.preventDefault()
+        return false
+      }}
+    >
+      Load more
+    </a>
+  )
   return (
     <div>
       <ItemCardList items={items} />
@@ -30,7 +43,7 @@ const PaginatedItemCardList: React.FC<PaginatedItemCardListProps> = ({
           },
         }}
       >
-        {items.pageInfo?.hasNextPage ? 'Load more' : 'No more items'}
+        {items.pageInfo?.hasNextPage ? linkToNextPage : 'No more items'}
       </Button>
     </div>
   )
