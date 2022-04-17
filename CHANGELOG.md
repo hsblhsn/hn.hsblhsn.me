@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.2.2...v1.2.3) (2022-04-17)
+
+
+### Bug Fixes
+
+* rendering for seo ([#41](https://github.com/hsblhsn/hn.hsblhsn.me/issues/41)) ([2afcf8e](https://github.com/hsblhsn/hn.hsblhsn.me/commit/2afcf8ebad30efda13f112ffe9ee5344468cbe90))
+
 ### [1.2.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.2.1...v1.2.2) (2022-04-17)
 
 
