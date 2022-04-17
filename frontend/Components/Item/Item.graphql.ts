@@ -13,7 +13,7 @@ const ITEM_FIELDS = gql`
     html
     type
     descendants
-    comments {
+    comments(first: 5) {
       ...CommentThreadFields
     }
     openGraph {

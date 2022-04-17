@@ -66,7 +66,11 @@ const Comment: React.FC<CommentProps> = ({ comment }: CommentProps) => {
           <div dangerouslySetInnerHTML={{ __html: comment.text || '' }} />
         </ParagraphSmall>
         <Block className="pl-3">
-          <CommentThread isChild={true} comments={comment.comments} />
+          <CommentThread
+            parentId={comment.id}
+            isChild={true}
+            comments={comment.comments}
+          />
         </Block>
       </Block>
     </Block>

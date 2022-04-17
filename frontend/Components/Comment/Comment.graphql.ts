@@ -13,10 +13,18 @@ const COMMENT_FIELDS = gql`
   fragment CommentFields on Comment {
     ...CommentContentFields
     comments(first: 5) {
+      pageInfo {
+        hasNextPage
+        endCursor
+      }
       edges {
         node {
           ...CommentContentFields
           comments(first: 5) {
+            pageInfo {
+              hasNextPage
+              endCursor
+            }
             edges {
               node {
                 ...CommentContentFields

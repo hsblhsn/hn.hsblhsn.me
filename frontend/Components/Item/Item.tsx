@@ -166,7 +166,7 @@ const Comments: React.FC<ItemProps> = ({ item }: ItemProps) => {
       )}
       {'comments' in item && (
         <Block paddingBottom={theme.sizing.scale2400}>
-          <CommentThread comments={item.comments} />
+          <CommentThread parentId={item.id} comments={item.comments} />
         </Block>
       )}
     </Block>
