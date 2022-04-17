@@ -1,3 +1,6 @@
 manifest: true
-handleGHRelease: true
 releaseType: go
+primaryBranch: main
+handleGHRelease: true
+bumpMinorPreMajor: true
+changelogPath: CHANGELOG.md
