@@ -18,6 +18,8 @@ func initLowQualityIndicators() {
 		"switch to a supported browser to continue using twitter.com",
 		// youtube
 		"https://www.youtube.com/howyoutubeworks",
+		// 403
+		"403 Forbidden",
 		// 404
 		"Page Not Found",
 		// Cloudflare bot check
