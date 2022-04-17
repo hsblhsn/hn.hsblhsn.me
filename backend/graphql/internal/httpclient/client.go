@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	MaxResponseSize = caches.DefaultMaxEntrySize
+	MaxResponseSize = 1024 * 1024 * 10 // 10MB
 )
 
 type CachedClient struct {
