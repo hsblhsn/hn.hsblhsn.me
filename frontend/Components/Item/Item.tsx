@@ -163,7 +163,7 @@ const Comments: React.FC<ItemProps> = ({ item }: ItemProps) => {
         </HeadingSmall>
       )}
       {'comments' in item && (
-        <Block paddingBottom={theme.sizing.scale2400}>
+        <Block>
           <CommentThread parentId={item.id} comments={item.comments} />
         </Block>
       )}
@@ -175,19 +175,18 @@ const ContentLinks: React.FC<ItemProps> = ({ item }: ItemProps) => {
   const [, theme] = useStyletron()
   return (
     <Block>
-      <ParagraphXSmall
-        as="div"
-        paddingTop={theme.sizing.scale2400}
-        paddingBottom={theme.sizing.scale2400}
-      >
+      <ParagraphXSmall as="div" paddingTop={theme.sizing.scale2400}>
         <LabelXSmall>
-          Contents loaded from&nbsp;&nbsp;
+          Contents:
+          <br />
           <StyledLink href={getLink(item.id, item.url)}>
             {getLink(item.id, item.url)}
           </StyledLink>
         </LabelXSmall>
+        <br />
         <LabelXSmall>
-          Comments loaded from&nbsp;&nbsp;
+          Comments:
+          <br />
           <StyledLink href={getLink(item.id, undefined)}>
             {getLink(item.id, undefined)}
           </StyledLink>
