@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.0.0...v1.1.0) (2022-04-17)
+
+
+### Features
+
+* add button to load more comments. ([#25](https://github.com/hsblhsn/hn.hsblhsn.me/issues/25)) ([eb7f19a](https://github.com/hsblhsn/hn.hsblhsn.me/commit/eb7f19a997096ed2ed7971bbe13326d8e114cd77)), closes [#21](https://github.com/hsblhsn/hn.hsblhsn.me/issues/21)
+
+
+### Bug Fixes
+
+* increase cache max sise and http client max read byte. ([#27](https://github.com/hsblhsn/hn.hsblhsn.me/issues/27)) ([77544b8](https://github.com/hsblhsn/hn.hsblhsn.me/commit/77544b8a7c716e6b2b9f2f2a95d51a0b57faa44d))
+
 ## 1.0.0 (2022-04-16)
 
 
