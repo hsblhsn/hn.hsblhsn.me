@@ -25,10 +25,10 @@ steps:
       - $_SERVICE_NAME
       - '--platform=$_PLATFORM'
       - '--image=$_GCR_HOSTNAME/$PROJECT_ID/$REPO_NAME/$_SERVICE_NAME:$COMMIT_SHA'
-      - '--labels=commit-sha=$SHORT_SHA,gcb-build-id=$BUILD_ID'
+      - '--labels=commit-sha=$COMMIT_SHA,gcb-build-id=$BUILD_ID'
       - '--region=$_DEPLOY_REGION'
       - '--no-traffic'
-      - '--tag=$COMMIT_SHA'
+      - '--tag=$SHORT_SHA'
       - '--quiet'
     id: Deploy
     entrypoint: gcloud
