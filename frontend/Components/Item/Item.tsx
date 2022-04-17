@@ -9,7 +9,7 @@ import {
   LabelXSmall,
   ParagraphXSmall,
 } from 'baseui/typography'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { Job, NodeT, Story } from '../../Types'
 import { CommentThread } from '../CommentThread'
 import { fromNow, getHost, getLink, getTitle } from '../commonutils'
@@ -60,10 +60,8 @@ const Header: React.FC<ItemProps> = ({ item }: ItemProps) => {
           {item.time ? fromNow(item.time * 1000) : 'unknown'}
         </span>
       </LabelXSmall>
-      <HeadingLarge>
-        <Link to={`/item?id=${item.id}`}>
-          {getTitle(item.title, item.openGraph?.title)}
-        </Link>
+      <HeadingLarge as="h1">
+        {getTitle(item.title, item.openGraph?.title)}
       </HeadingLarge>
       <LabelXSmall
         color={theme.colors.contentTertiary}
