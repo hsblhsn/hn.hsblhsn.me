@@ -38,7 +38,7 @@ steps:
       - services
       - update-traffic
       - $_SERVICE_NAME
-      - '--to-tags= $SHORT_SHA=$_TRAFFIC_RATIO'
+      - '--to-tags=$SHORT_SHA=$_TRAFFIC_RATIO'
       - '--quiet'
     id: Serve
     entrypoint: gcloud
