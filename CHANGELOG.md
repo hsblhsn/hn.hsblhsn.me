@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.2.1...v1.2.2) (2022-04-17)
+
+
+### Bug Fixes
+
+* '+' was appended in version name ([#39](https://github.com/hsblhsn/hn.hsblhsn.me/issues/39)) ([2687cc9](https://github.com/hsblhsn/hn.hsblhsn.me/commit/2687cc9cf9cb3ec9f1f0d11737d6cb54c43d5964))
+
 ### [1.2.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.2.0...v1.2.1) (2022-04-17)
 
 
