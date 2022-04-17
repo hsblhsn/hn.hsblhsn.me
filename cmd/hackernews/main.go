@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"net/http"
 	"os"
 	"os/signal"
@@ -114,13 +113,13 @@ func pprofiler(logger *zap.Logger) {
 	}
 }
 
-func parseBuildInfo() (svc, rev string) {
+func parseBuildInfo() (service, revision string) {
 	defaultMod := "hn.hsblhsn.me"
 	info, ok := debug.ReadBuildInfo()
 	if !ok {
 		return defaultMod, ""
 	}
-	svc = info.Main.Path
+	service = info.Main.Path
 	var (
 		commit string
 		dirty  string
@@ -135,9 +134,11 @@ func parseBuildInfo() (svc, rev string) {
 			}
 		}
 	}
-	rev = fmt.Sprintf("%s+%s", commit, dirty)
-	if rev == "+" {
-		rev = "unknown"
+
+	if commit != "" {
+		revision = commit + dirty
+	} else {
+		revision = "unknown"
 	}
-	return path.Base(svc), rev
+	return path.Base(service), revision
 }
