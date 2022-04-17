@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.1.1...v1.2.0) (2022-04-17)
+
+
+### Features
+
+* add pprof uploader. ([#34](https://github.com/hsblhsn/hn.hsblhsn.me/issues/34)) ([e50e6bd](https://github.com/hsblhsn/hn.hsblhsn.me/commit/e50e6bd9c1fef05d6a7b7e87f58fce61f7891040))
+
 ### [1.1.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.1.0...v1.1.1) (2022-04-17)
 
 
