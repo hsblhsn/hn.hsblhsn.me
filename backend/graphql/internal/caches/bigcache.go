@@ -8,6 +8,7 @@ import (
 
 const (
 	DefaultCacheExpiration = 10 * time.Minute
+	DefaultMaxEntrySize    = 1024 * 1024 * 10 // 10MB
 	DefaultMaxCacheSizeMB  = 800
 )
 
@@ -19,6 +20,7 @@ var _ Cache = (*bigcache.BigCache)(nil)
 func NewInMemoryCache() *bigcache.BigCache {
 	cfg := bigcache.DefaultConfig(DefaultCacheExpiration)
 	cfg.HardMaxCacheSize = DefaultMaxCacheSizeMB
+	cfg.MaxEntrySize = DefaultMaxEntrySize
 	cache, err := bigcache.NewBigCache(cfg)
 	if err != nil {
 		panic(err)
