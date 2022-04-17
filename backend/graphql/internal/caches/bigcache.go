@@ -8,7 +8,7 @@ import (
 
 const (
 	DefaultCacheExpiration = 10 * time.Minute
-	DefaultMaxCacheSizeMB  = 500
+	DefaultMaxCacheSizeMB  = 800
 )
 
 var _ Cache = (*bigcache.BigCache)(nil)
