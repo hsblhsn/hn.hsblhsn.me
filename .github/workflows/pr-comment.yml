@@ -12,8 +12,8 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             const link = `https://gh${context.sha.substr(0,7)}---hackernews-reader-jw5iyahjwq-uc.a.run.app`;
-            const msg = `If everything goes right, a preview of this PR will be available shortly ` +
-              `[here](${link}).\n\n`+
+            const msg = `If everything goes right, a preview of this PR will be available shortly! ` +
+              `[Click here](${link}) to check it out.\n\n`+
               `Thank you!`;
             github.issues.createComment({
               issue_number: context.issue.number,
