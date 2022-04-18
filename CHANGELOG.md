@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.3.0...v1.4.0) (2022-04-18)
+
+
+### Features
+
+* add timeout for request. ([#55](https://github.com/hsblhsn/hn.hsblhsn.me/issues/55)) ([05066be](https://github.com/hsblhsn/hn.hsblhsn.me/commit/05066be02699a449ac57e3e888d10ecaa7d48ff7))
+
+
+### Bug Fixes
+
+* preview link comment on pr. ([#53](https://github.com/hsblhsn/hn.hsblhsn.me/issues/53)) ([224f8b4](https://github.com/hsblhsn/hn.hsblhsn.me/commit/224f8b4cc9760248374886cd06199a0e0ef1222a))
+
 ## [1.3.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.2.3...v1.3.0) (2022-04-18)
 
 
