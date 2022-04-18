@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.2.3...v1.3.0) (2022-04-18)
+
+
+### Features
+
+* add '403 forbidden' as low quality indicator. ([#47](https://github.com/hsblhsn/hn.hsblhsn.me/issues/47)) ([cdda924](https://github.com/hsblhsn/hn.hsblhsn.me/commit/cdda924a2eb4a6735a5f4c940010e763ddf791f2))
+* add GitHub Action to comment preview link to the PR. ([#52](https://github.com/hsblhsn/hn.hsblhsn.me/issues/52)) ([c263f5f](https://github.com/hsblhsn/hn.hsblhsn.me/commit/c263f5f08569b739d9d633299530b6350d448612))
+* add Google Cloud Build configuration. ([#48](https://github.com/hsblhsn/hn.hsblhsn.me/issues/48)) ([d85e5b4](https://github.com/hsblhsn/hn.hsblhsn.me/commit/d85e5b4e0cb8a6191285c6b3b17abebf5c1a3769))
+
+
+### Bug Fixes
+
+* huge padding at the bottom on content link section. ([#44](https://github.com/hsblhsn/hn.hsblhsn.me/issues/44)) ([3f9d285](https://github.com/hsblhsn/hn.hsblhsn.me/commit/3f9d28508d9bc6b2ccc01c244d1ac310b64ddbc4))
+
 ### [1.2.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.2.2...v1.2.3) (2022-04-17)
 
 
