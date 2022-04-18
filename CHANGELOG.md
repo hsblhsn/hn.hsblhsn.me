@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.4.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.1...v1.4.2) (2022-04-18)
+
+
+### Bug Fixes
+
+* poll api ([#68](https://github.com/hsblhsn/hn.hsblhsn.me/issues/68)) ([cb6c9bf](https://github.com/hsblhsn/hn.hsblhsn.me/commit/cb6c9bfc9a0f240a5bd377017a6e60ff1337035b))
+
 ### [1.4.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.0...v1.4.1) (2022-04-18)
 
 
