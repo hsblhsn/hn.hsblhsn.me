@@ -8,6 +8,7 @@ import (
 	"path"
 	"runtime/debug"
 	"syscall"
+	"time"
 
 	"cloud.google.com/go/profiler"
 	"github.com/blendle/zapdriver"
@@ -56,8 +57,10 @@ func httpServer(
 	router *mux.Router,
 	logger *zap.Logger,
 ) {
+	const defaultTimeout = 10 * time.Second
+	const defaultTimeoutResponse = `{"errors": {"message": "Server timeout"}}`
 	server := &http.Server{
-		Handler: router,
+		Handler: http.TimeoutHandler(router, defaultTimeout, defaultTimeoutResponse),
 		Addr:    ":8080",
 	}
 	shutdown := func() {
