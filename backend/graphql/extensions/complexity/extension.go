@@ -19,7 +19,7 @@ var _ interface {
 	graphql.HandlerExtension
 } = &Extension{}
 
-func NewLimitExtension(limit int, m Map) *Extension {
+func NewExtension(limit int, m Map) *Extension {
 	return &Extension{
 		limit:   limit,
 		entries: m,

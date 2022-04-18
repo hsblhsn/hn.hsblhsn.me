@@ -79,7 +79,11 @@ func (s *ExternalContentLoader) getContentFromURL(ctx context.Context) error {
 
 func (s *ExternalContentLoader) Opengraph(ctx context.Context) *opengraphs.OpenGraph {
 	if err := s.getContentFromURL(ctx); err != nil {
-		logger.Error("model: could not get content from url", zap.Error(err))
+		logger.Error(
+			"model: could not get content from url",
+			zap.Error(err),
+			zap.String("url", s.url),
+		)
 		return nil
 	}
 
@@ -88,7 +92,10 @@ func (s *ExternalContentLoader) Opengraph(ctx context.Context) *opengraphs.OpenG
 	}
 	out, err := opengraphs.GetOpengraphData(s.url, bytes.NewBuffer(s.content))
 	if err != nil {
-		logger.Error("model: could not parse opengraph content", zap.Error(err))
+		logger.Error("model: could not parse opengraph content",
+			zap.Error(err),
+			zap.String("url", s.url),
+		)
 		return nil
 	}
 	return out
@@ -96,7 +103,10 @@ func (s *ExternalContentLoader) Opengraph(ctx context.Context) *opengraphs.OpenG
 
 func (s *ExternalContentLoader) HTML(ctx context.Context) *string {
 	if err := s.getContentFromURL(ctx); err != nil {
-		logger.Error("model: could not get content from url", zap.Error(err))
+		logger.Error("model: could not get content from url",
+			zap.Error(err),
+			zap.String("url", s.url),
+		)
 		return nil
 	}
 
@@ -105,7 +115,10 @@ func (s *ExternalContentLoader) HTML(ctx context.Context) *string {
 	}
 	out, err := readerviews.Convert(ctx, s.url, bytes.NewBuffer(s.content))
 	if err != nil {
-		logger.Error("model: could not convert readerview content", zap.Error(err))
+		logger.Error("model: could not convert readerview content",
+			zap.Error(err),
+			zap.String("url", s.url),
+		)
 		return nil
 	}
 	return &out

@@ -2,10 +2,12 @@ package graphql
 
 import (
 	"context"
+	"time"
 
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/handler"
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/complexity"
+	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/extensions/complexity"
+	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/extensions/timeout"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/generated"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/httpclient"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/images"
@@ -24,6 +26,7 @@ const (
 	MaxQueryComplexity      = 500
 	complexityNetworkField  = 1
 	complexityComputedField = 10
+	DefaultTimeout          = time.Second * 10
 )
 
 // ComplexityMap is a map of field names to their maximum complexity.
@@ -57,7 +60,8 @@ func NewGQLHandler(resolver *Resolver, logger *zap.Logger) *GQLHandler {
 	config := generated.Config{Resolvers: resolver}
 	server := handler.NewDefaultServer(generated.NewExecutableSchema(config))
 	// setup extensions.
-	server.Use(complexity.NewLimitExtension(MaxQueryComplexity, ComplexityMap))
+	server.Use(timeout.NewExtension(DefaultTimeout))
+	server.Use(complexity.NewExtension(MaxQueryComplexity, ComplexityMap))
 	// setup error presenters.
 	server.SetErrorPresenter(newErrorPresenterFunc(logger))
 	server.SetRecoverFunc(newRecoverFunc(logger))

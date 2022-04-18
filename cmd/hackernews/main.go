@@ -57,7 +57,7 @@ func httpServer(
 	router *mux.Router,
 	logger *zap.Logger,
 ) {
-	const defaultTimeout = 10 * time.Second
+	const defaultTimeout = 15 * time.Second
 	const defaultTimeoutResponse = `{"errors": {"message": "Server timeout"}}`
 	server := &http.Server{
 		Handler: http.TimeoutHandler(router, defaultTimeout, defaultTimeoutResponse),
