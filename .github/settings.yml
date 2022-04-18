@@ -40,8 +40,7 @@ branches:
           teams: [ ]
       required_status_checks:
         strict: true
-        contexts:
-          - preview-hn-hsblhsn-me
+        contexts: [ ]
       enforce_admins: false
       required_linear_history: false
       allow_force_pushes: true
