@@ -37,9 +37,11 @@ branches:
           teams: [ ]
       required_status_checks:
         strict: true
-        contexts: [ ]
+        contexts:
+          - preview-hn-hsblhsn-me
       enforce_admins: false
       required_linear_history: false
+      allow_force_pushes: true
       restrictions:
         apps: [ ]
         users: [ ]
