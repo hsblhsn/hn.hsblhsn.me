@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"context"
+	"fmt"
 	"net/http"
 	"net/http/httputil"
 
@@ -14,6 +15,7 @@ import (
 
 const (
 	MaxResponseSize = 1024 * 1024 * 10 // 10MB
+	UserAgent       = "HackerNews[bot] +https://hn.hsblhsn.me/"
 )
 
 type CachedClient struct {
@@ -53,7 +55,10 @@ func (c *CachedClient) Do(request *http.Request) (*http.Response, error) {
 		}
 		return resp, nil
 	}
+
 	c.logger.Debug("httpclient: sending http request", zap.String("uri", uri))
+	request.Header.Set("Range", fmt.Sprintf("bytes=0-%d", MaxResponseSize))
+	request.Header.Set("User-Agent", UserAgent)
 	resp, err := c.httpClient.Do(request)
 	if err != nil {
 		return nil, errors.Wrap(err, "httpclient: could not send request")
