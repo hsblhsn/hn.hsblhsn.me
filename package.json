@@ -27,7 +27,7 @@
     "@babel/core": "^7.17.9",
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2",
+    "@types/react-dom": "^18.0.1",
     "@types/styletron-engine-atomic": "^1.1.1",
     "@types/styletron-react": "^5.0.3",
     "@types/styletron-standard": "^2.0.2",
