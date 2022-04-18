@@ -24,10 +24,10 @@ type PollOption implements Node {
   deleted: Boolean!
   type: String!
   by: String!
+  text: String!
   time: Int!
   dead: Boolean!
-  kids: [Int!]!
-  parent: ID!
+  poll: ID!
   score: Int!
 }
 
