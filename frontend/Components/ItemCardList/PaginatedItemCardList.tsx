@@ -39,6 +39,7 @@ const PaginatedItemCardList: React.FC<PaginatedItemCardListProps> = ({
             style: ({ $theme }: StyleProps) => ({
               width: '100%',
               marginTop: $theme.sizing.scale900,
+              marginBottom: $theme.sizing.scale1200,
             }),
           },
         }}
