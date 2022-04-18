@@ -24,7 +24,10 @@ labels:
     description: New functionality.
   - name: documentation
     color: AAAA00
-    description: New functionality.
+    description: Anything about documentation.
+  - name: content-quality
+    color: AA00AA
+    description: Anything about the quality improvement of the content.
 
 branches:
   - name: main
