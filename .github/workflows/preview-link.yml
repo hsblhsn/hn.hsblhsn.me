@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  pr_comment:
+  comment_on_pr:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/github-script@v3
