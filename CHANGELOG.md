@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.4.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.2...v1.4.3) (2022-04-18)
+
+
+### Bug Fixes
+
+* graphql response extension. ([aad2a18](https://github.com/hsblhsn/hn.hsblhsn.me/commit/aad2a188b2ca76815a13945c2449031051607e89))
+
 ### [1.4.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.1...v1.4.2) (2022-04-18)
 
 
