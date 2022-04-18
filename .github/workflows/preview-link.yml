@@ -2,8 +2,7 @@ name: "Preview Link"
 
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   comment_on_pr:
