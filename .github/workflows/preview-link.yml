@@ -13,7 +13,9 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            const link = `https://gh${context.sha.substr(0,7)}---hackernews-reader-jw5iyahjwq-uc.a.run.app`;
+            const prefix = 'gh${context.payload.pull_request.head.sha.substr(0,7)}'
+            const suffix = 'hackernews-reader-jw5iyahjwq-uc.a.run.app'
+            const link = `https://${prefix}---${suffix}`
             const msg = `If everything goes right, a preview of this PR will be available shortly!\n\n` +
               `Check [${link}](${link})\n\n`+
               `Thank you! :heart:`;
