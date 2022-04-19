@@ -39,8 +39,8 @@ func (r *pollOptionResolver) Type(ctx context.Context, obj *model.PollOption) (s
 	return obj.Type.String(), nil
 }
 
-func (r *pollOptionResolver) Parent(ctx context.Context, obj *model.PollOption) (string, error) {
-	return strconv.Itoa(obj.Parent), nil
+func (r *pollOptionResolver) Poll(ctx context.Context, obj *model.PollOption) (string, error) {
+	return strconv.Itoa(obj.Poll), nil
 }
 
 // Poll returns generated.PollResolver implementation.

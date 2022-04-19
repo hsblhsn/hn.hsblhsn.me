@@ -18,7 +18,6 @@ func (t ItemType) String() string {
 }
 
 const (
-	ItemTypeAny        = "any"
 	ItemTypeJob        = "job"
 	ItemTypeStory      = "story"
 	ItemTypeComment    = "comment"
@@ -34,6 +33,7 @@ type ItemResponse struct {
 	Time        int      `json:"time"`
 	Descendants int      `json:"descendants"`
 	Score       int      `json:"score"`
+	Poll        int      `json:"poll"`
 	Parent      int      `json:"parent"`
 	Type        ItemType `json:"type"`
 	By          string   `json:"by"`
