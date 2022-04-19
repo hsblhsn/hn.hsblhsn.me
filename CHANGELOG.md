@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.7.4](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.3...v1.7.4) (2022-04-19)
+
+
+### Bug Fixes
+
+* remove mistakenly pushed styles. ([bed3ed0](https://github.com/hsblhsn/hn.hsblhsn.me/commit/bed3ed0312ee8c27d39f00353cd3ddda0d0d9872))
+
 ### [1.7.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.2...v1.7.3) (2022-04-19)
 
 
