@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.4.4](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.3...v1.4.4) (2022-04-19)
+
+
+### Bug Fixes
+
+* over saturation of comment thread border. ([9dbc5e3](https://github.com/hsblhsn/hn.hsblhsn.me/commit/9dbc5e36a2f7950ef466ee345b5f103d7a554fa6))
+
 ### [1.4.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.2...v1.4.3) (2022-04-18)
 
 
