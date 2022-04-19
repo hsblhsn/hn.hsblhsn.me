@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.7.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.0...v1.7.1) (2022-04-19)
+
+
+### Bug Fixes
+
+* popover menu border contrast. ([c0a6216](https://github.com/hsblhsn/hn.hsblhsn.me/commit/c0a621602df5e512382d74c1397791b651aeae59))
+
 ## [1.7.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.6.0...v1.7.0) (2022-04-19)
 
 
