@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.7.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.2...v1.7.3) (2022-04-19)
+
+
+### Bug Fixes
+
+* page breaks on invalid item id. ([978b12f](https://github.com/hsblhsn/hn.hsblhsn.me/commit/978b12fbcad1979cda3c9751fb959531e565daa3))
+
 ### [1.7.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.1...v1.7.2) (2022-04-19)
 
 
