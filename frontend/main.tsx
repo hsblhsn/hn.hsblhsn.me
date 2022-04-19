@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 import { Client as Styletron } from 'styletron-engine-atomic'
 import { Provider as StyletronProvider } from 'styletron-react'
 import './index.css'
@@ -38,7 +38,10 @@ const client = new ApolloClient({
   }),
 })
 
-ReactDOM.render(
+const container = document.getElementById('root') as HTMLElement
+const root = ReactDOM.createRoot(container)
+
+root.render(
   <React.StrictMode>
     <StyletronProvider value={engine}>
       <ApolloProvider client={client}>
@@ -51,6 +54,5 @@ ReactDOM.render(
         </BrowserRouter>
       </ApolloProvider>
     </StyletronProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 )
