@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.6.0...v1.7.0) (2022-04-19)
+
+
+### Features
+
+* close contextual menu after clicking on any action. ([77b8409](https://github.com/hsblhsn/hn.hsblhsn.me/commit/77b8409bfae746ee4dbda746dc3f4ccb7ad261a3))
+
 ## [1.6.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.5.1...v1.6.0) (2022-04-19)
 
 
