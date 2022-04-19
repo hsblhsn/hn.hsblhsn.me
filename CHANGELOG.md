@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.4...v1.5.0) (2022-04-19)
+
+
+### Features
+
+* add contextual button to share and open items. ([4babdac](https://github.com/hsblhsn/hn.hsblhsn.me/commit/4babdac6887025c7a17ac47a1dd39b42dca08181))
+* add jump to comment button. ([7a099f7](https://github.com/hsblhsn/hn.hsblhsn.me/commit/7a099f7cf3b55dbebe4e682f6dd6314d6ea0fe0b))
+
 ### [1.4.4](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.3...v1.4.4) (2022-04-19)
 
 
