@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.5.1...v1.6.0) (2022-04-19)
+
+
+### Features
+
+* add copy link button to the contextual menu. ([c1010e1](https://github.com/hsblhsn/hn.hsblhsn.me/commit/c1010e1f2a3d9274234988955222241838064479))
+
 ### [1.5.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.5.0...v1.5.1) (2022-04-19)
 
 
