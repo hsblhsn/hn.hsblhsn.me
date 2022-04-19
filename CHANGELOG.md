@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.5.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.5.0...v1.5.1) (2022-04-19)
+
+
+### Bug Fixes
+
+* an issue where next page link was pointing to current page. ([880a794](https://github.com/hsblhsn/hn.hsblhsn.me/commit/880a79485fd694d6e65c4e7c6a5b0f7e845abd86))
+
 ## [1.5.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.4...v1.5.0) (2022-04-19)
 
 
