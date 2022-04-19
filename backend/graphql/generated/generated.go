@@ -159,9 +159,9 @@ type ComplexityRoot struct {
 		Dead       func(childComplexity int) int
 		Deleted    func(childComplexity int) int
 		ID         func(childComplexity int) int
-		Kids       func(childComplexity int) int
-		Parent     func(childComplexity int) int
+		Poll       func(childComplexity int) int
 		Score      func(childComplexity int) int
+		Text       func(childComplexity int) int
 		Time       func(childComplexity int) int
 		Type       func(childComplexity int) int
 	}
@@ -249,7 +249,7 @@ type PollResolver interface {
 type PollOptionResolver interface {
 	Type(ctx context.Context, obj *model.PollOption) (string, error)
 
-	Parent(ctx context.Context, obj *model.PollOption) (string, error)
+	Poll(ctx context.Context, obj *model.PollOption) (string, error)
 }
 type QueryResolver interface {
 	Node(ctx context.Context, id string) (model.Node, error)
@@ -813,19 +813,12 @@ func (e *executableSchema) Complexity(typeName, field string, childComplexity in
 
 		return e.complexity.PollOption.ID(childComplexity), true
 
-	case "PollOption.kids":
-		if e.complexity.PollOption.Kids == nil {
+	case "PollOption.poll":
+		if e.complexity.PollOption.Poll == nil {
 			break
 		}
 
-		return e.complexity.PollOption.Kids(childComplexity), true
-
-	case "PollOption.parent":
-		if e.complexity.PollOption.Parent == nil {
-			break
-		}
-
-		return e.complexity.PollOption.Parent(childComplexity), true
+		return e.complexity.PollOption.Poll(childComplexity), true
 
 	case "PollOption.score":
 		if e.complexity.PollOption.Score == nil {
@@ -833,6 +826,13 @@ func (e *executableSchema) Complexity(typeName, field string, childComplexity in
 		}
 
 		return e.complexity.PollOption.Score(childComplexity), true
+
+	case "PollOption.text":
+		if e.complexity.PollOption.Text == nil {
+			break
+		}
+
+		return e.complexity.PollOption.Text(childComplexity), true
 
 	case "PollOption.time":
 		if e.complexity.PollOption.Time == nil {
@@ -1284,47 +1284,47 @@ type OpenGraph {
 }
 `, BuiltIn: false},
 	{Name: "backend/graphql/schema/poll.graphqls", Input: `type Poll implements Node {
-  id: ID!
-  databaseId: Int!
-  deleted: Boolean!
-  type: String!
-  by: String!
-  time: Int!
-  dead: Boolean!
-  kids: [Int!]!
-  comments(after: Cursor, first: Int): CommentConnection!
+    id: ID!
+    databaseId: Int!
+    deleted: Boolean!
+    type: String!
+    by: String!
+    time: Int!
+    dead: Boolean!
+    kids: [Int!]!
+    comments(after: Cursor, first: Int): CommentConnection!
     @goField(forceResolver: true)
-  parts: [Int!]!
-  pollOptions(after: Cursor, first: Int): PollOptionConnection!
+    parts: [Int!]!
+    pollOptions(after: Cursor, first: Int): PollOptionConnection!
     @goField(forceResolver: true)
-  descendants: Int!
-  score: Int!
-  url: String!
-  title: String!
+    descendants: Int!
+    score: Int!
+    url: String!
+    title: String!
 }
 
 type PollOption implements Node {
-  id: ID!
-  databaseId: Int!
-  deleted: Boolean!
-  type: String!
-  by: String!
-  time: Int!
-  dead: Boolean!
-  kids: [Int!]!
-  parent: ID!
-  score: Int!
+    id: ID!
+    databaseId: Int!
+    deleted: Boolean!
+    type: String!
+    by: String!
+    text: String!
+    time: Int!
+    dead: Boolean!
+    poll: ID!
+    score: Int!
 }
 
 type PollOptionConnection {
-  pageInfo: PageInfo!
-  edges: [PollOptionEdge!]!
-  totalCount: Int!
+    pageInfo: PageInfo!
+    edges: [PollOptionEdge!]!
+    totalCount: Int!
 }
 
 type PollOptionEdge {
-  node: PollOption
-  cursor: Cursor!
+    node: PollOption
+    cursor: Cursor!
 }
 `, BuiltIn: false},
 	{Name: "backend/graphql/schema/query.graphqls", Input: `type Query {
@@ -4236,6 +4236,41 @@ func (ec *executionContext) _PollOption_by(ctx context.Context, field graphql.Co
 	return ec.marshalNString2string(ctx, field.Selections, res)
 }
 
+func (ec *executionContext) _PollOption_text(ctx context.Context, field graphql.CollectedField, obj *model.PollOption) (ret graphql.Marshaler) {
+	defer func() {
+		if r := recover(); r != nil {
+			ec.Error(ctx, ec.Recover(ctx, r))
+			ret = graphql.Null
+		}
+	}()
+	fc := &graphql.FieldContext{
+		Object:     "PollOption",
+		Field:      field,
+		Args:       nil,
+		IsMethod:   false,
+		IsResolver: false,
+	}
+
+	ctx = graphql.WithFieldContext(ctx, fc)
+	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
+		ctx = rctx // use context from middleware stack in children
+		return obj.Text, nil
+	})
+	if err != nil {
+		ec.Error(ctx, err)
+		return graphql.Null
+	}
+	if resTmp == nil {
+		if !graphql.HasFieldError(ctx, fc) {
+			ec.Errorf(ctx, "must not be null")
+		}
+		return graphql.Null
+	}
+	res := resTmp.(string)
+	fc.Result = res
+	return ec.marshalNString2string(ctx, field.Selections, res)
+}
+
 func (ec *executionContext) _PollOption_time(ctx context.Context, field graphql.CollectedField, obj *model.PollOption) (ret graphql.Marshaler) {
 	defer func() {
 		if r := recover(); r != nil {
@@ -4306,42 +4341,7 @@ func (ec *executionContext) _PollOption_dead(ctx context.Context, field graphql.
 	return ec.marshalNBoolean2bool(ctx, field.Selections, res)
 }
 
-func (ec *executionContext) _PollOption_kids(ctx context.Context, field graphql.CollectedField, obj *model.PollOption) (ret graphql.Marshaler) {
-	defer func() {
-		if r := recover(); r != nil {
-			ec.Error(ctx, ec.Recover(ctx, r))
-			ret = graphql.Null
-		}
-	}()
-	fc := &graphql.FieldContext{
-		Object:     "PollOption",
-		Field:      field,
-		Args:       nil,
-		IsMethod:   false,
-		IsResolver: false,
-	}
-
-	ctx = graphql.WithFieldContext(ctx, fc)
-	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
-		ctx = rctx // use context from middleware stack in children
-		return obj.Kids, nil
-	})
-	if err != nil {
-		ec.Error(ctx, err)
-		return graphql.Null
-	}
-	if resTmp == nil {
-		if !graphql.HasFieldError(ctx, fc) {
-			ec.Errorf(ctx, "must not be null")
-		}
-		return graphql.Null
-	}
-	res := resTmp.([]int)
-	fc.Result = res
-	return ec.marshalNInt2ᚕintᚄ(ctx, field.Selections, res)
-}
-
-func (ec *executionContext) _PollOption_parent(ctx context.Context, field graphql.CollectedField, obj *model.PollOption) (ret graphql.Marshaler) {
+func (ec *executionContext) _PollOption_poll(ctx context.Context, field graphql.CollectedField, obj *model.PollOption) (ret graphql.Marshaler) {
 	defer func() {
 		if r := recover(); r != nil {
 			ec.Error(ctx, ec.Recover(ctx, r))
@@ -4359,7 +4359,7 @@ func (ec *executionContext) _PollOption_parent(ctx context.Context, field graphq
 	ctx = graphql.WithFieldContext(ctx, fc)
 	resTmp, err := ec.ResolverMiddleware(ctx, func(rctx context.Context) (interface{}, error) {
 		ctx = rctx // use context from middleware stack in children
-		return ec.resolvers.PollOption().Parent(rctx, obj)
+		return ec.resolvers.PollOption().Poll(rctx, obj)
 	})
 	if err != nil {
 		ec.Error(ctx, err)
@@ -8150,6 +8150,16 @@ func (ec *executionContext) _PollOption(ctx context.Context, sel ast.SelectionSe
 			if out.Values[i] == graphql.Null {
 				atomic.AddUint32(&invalids, 1)
 			}
+		case "text":
+			innerFunc := func(ctx context.Context) (res graphql.Marshaler) {
+				return ec._PollOption_text(ctx, field, obj)
+			}
+
+			out.Values[i] = innerFunc(ctx)
+
+			if out.Values[i] == graphql.Null {
+				atomic.AddUint32(&invalids, 1)
+			}
 		case "time":
 			innerFunc := func(ctx context.Context) (res graphql.Marshaler) {
 				return ec._PollOption_time(ctx, field, obj)
@@ -8170,17 +8180,7 @@ func (ec *executionContext) _PollOption(ctx context.Context, sel ast.SelectionSe
 			if out.Values[i] == graphql.Null {
 				atomic.AddUint32(&invalids, 1)
 			}
-		case "kids":
-			innerFunc := func(ctx context.Context) (res graphql.Marshaler) {
-				return ec._PollOption_kids(ctx, field, obj)
-			}
-
-			out.Values[i] = innerFunc(ctx)
-
-			if out.Values[i] == graphql.Null {
-				atomic.AddUint32(&invalids, 1)
-			}
-		case "parent":
+		case "poll":
 			field := field
 
 			innerFunc := func(ctx context.Context) (res graphql.Marshaler) {
@@ -8189,7 +8189,7 @@ func (ec *executionContext) _PollOption(ctx context.Context, sel ast.SelectionSe
 						ec.Error(ctx, ec.Recover(ctx, r))
 					}
 				}()
-				res = ec._PollOption_parent(ctx, field, obj)
+				res = ec._PollOption_poll(ctx, field, obj)
 				if res == graphql.Null {
 					atomic.AddUint32(&invalids, 1)
 				}

@@ -42,10 +42,11 @@ func (c *Extension) InterceptResponse(ctx context.Context, next graphql.Response
 		panic(err)
 	}
 	counter.MakeReady()
-	resp.Extensions = map[string]interface{}{
-		"complexity":      counter.Value(),
-		"complexityLimit": counter.Limit(),
+	if resp.Extensions == nil {
+		resp.Extensions = make(map[string]interface{})
 	}
+	resp.Extensions["complexity"] = counter.Value()
+	resp.Extensions["complexityLimit"] = counter.Limit()
 	return resp
 }
 

@@ -1,5 +1,27 @@
 # Changelog
 
+### [1.4.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.2...v1.4.3) (2022-04-18)
+
+
+### Bug Fixes
+
+* graphql response extension. ([aad2a18](https://github.com/hsblhsn/hn.hsblhsn.me/commit/aad2a188b2ca76815a13945c2449031051607e89))
+
+### [1.4.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.1...v1.4.2) (2022-04-18)
+
+
+### Bug Fixes
+
+* poll api ([#68](https://github.com/hsblhsn/hn.hsblhsn.me/issues/68)) ([cb6c9bf](https://github.com/hsblhsn/hn.hsblhsn.me/commit/cb6c9bfc9a0f240a5bd377017a6e60ff1337035b))
+
+### [1.4.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.4.0...v1.4.1) (2022-04-18)
+
+
+### Bug Fixes
+
+* add bottom padding to load more button to have more space. ([#67](https://github.com/hsblhsn/hn.hsblhsn.me/issues/67)) ([e27e2a7](https://github.com/hsblhsn/hn.hsblhsn.me/commit/e27e2a797197f563d173b02cded995acd19ce86f))
+* send Range and User-Agent header. ([#58](https://github.com/hsblhsn/hn.hsblhsn.me/issues/58)) ([7f8e981](https://github.com/hsblhsn/hn.hsblhsn.me/commit/7f8e9817ffbd583ef7aa3918fb8a2cc7e464e767))
+
 ## [1.4.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.3.0...v1.4.0) (2022-04-18)
 
 
