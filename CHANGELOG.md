@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.7.5](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.4...v1.7.5) (2022-04-19)
+
+
+### Bug Fixes
+
+* show the content we have. do not just throw error. ([45b3a40](https://github.com/hsblhsn/hn.hsblhsn.me/commit/45b3a40d2f740b276531f5bd03b040c0fd8ea3df))
+
 ### [1.7.4](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.3...v1.7.4) (2022-04-19)
 
 
