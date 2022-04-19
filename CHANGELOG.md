@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.7.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.1...v1.7.2) (2022-04-19)
+
+
+### Bug Fixes
+
+* reduce the brightness of thread border. ([eb9d480](https://github.com/hsblhsn/hn.hsblhsn.me/commit/eb9d480ac42447fabb4ee773183eff1c093aaa64))
+
 ### [1.7.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.0...v1.7.1) (2022-04-19)
 
 
