@@ -36,8 +36,9 @@ func (c *Extension) InterceptResponse(ctx context.Context, next graphql.Response
 	started := time.Now()
 	resp := next(ctx)
 	timeTook := time.Since(started)
-	resp.Extensions = map[string]interface{}{
-		"time_took": timeTook.String(),
+	if resp.Extensions == nil {
+		resp.Extensions = make(map[string]interface{})
 	}
+	resp.Extensions["timeTook"] = timeTook.String()
 	return resp
 }
