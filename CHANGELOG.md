@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.8.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.5...v1.8.0) (2022-04-20)
+
+
+### Features
+
+* add user resolver to graphql. ([391bde4](https://github.com/hsblhsn/hn.hsblhsn.me/commit/391bde4cad98a85ff269744586bcc6fd1715cfbb))
+* add user resolver to graphql. ([b994c2c](https://github.com/hsblhsn/hn.hsblhsn.me/commit/b994c2c5251cfa4a158a843d9234c7c0356ba075))
+* get user info from user resolver. ([e8c4382](https://github.com/hsblhsn/hn.hsblhsn.me/commit/e8c43829123d0c16a3180717c5d7e9e692875207))
+
 ### [1.7.5](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.4...v1.7.5) (2022-04-19)
 
 
