@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
-    "baseui": "^11.0.0",
+    "baseui": "^11.0.1",
     "graphql": "^16.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
