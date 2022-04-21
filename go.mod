@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	cloud.google.com/go/profiler v0.2.0
-	github.com/99designs/gqlgen v0.17.2
+	github.com/99designs/gqlgen v0.17.3
 	github.com/PuerkitoBio/goquery v1.8.0
 	github.com/allegro/bigcache/v3 v3.0.2
 	github.com/blendle/zapdriver v1.3.1
@@ -16,7 +16,7 @@ require (
 	github.com/otiai10/opengraph/v2 v2.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.7.1
-	github.com/vektah/gqlparser/v2 v2.4.1
+	github.com/vektah/gqlparser/v2 v2.4.2
 	go.uber.org/fx v1.17.1
 	go.uber.org/zap v1.21.0
 	google.golang.org/grpc v1.45.0
@@ -26,7 +26,7 @@ require (
 require (
 	cloud.google.com/go v0.100.2 // indirect
 	cloud.google.com/go/compute v0.1.0 // indirect
-	github.com/agnivade/levenshtein v1.1.0 // indirect
+	github.com/agnivade/levenshtein v1.1.1 // indirect
 	github.com/andybalholm/cascadia v1.3.1 // indirect
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
