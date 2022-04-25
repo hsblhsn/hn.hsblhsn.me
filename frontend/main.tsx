@@ -28,6 +28,7 @@ const client = new ApolloClient({
           topStories: relayStylePagination(),
           jobStories: relayStylePagination(),
           askStories: relayStylePagination(),
+          search: relayStylePagination(),
         },
       },
     },
