@@ -1,25 +1,28 @@
 import { Block } from 'baseui/block'
 import {
-  HeaderNavigation,
   StyledNavigationItem,
   StyledNavigationList,
   ALIGN,
 } from 'baseui/header-navigation'
 import { Link } from 'react-router-dom'
+import { useStyletron } from 'baseui'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface NavBarProps {}
 
 const NavBar: React.FC<NavBarProps> = () => {
+  const [, theme] = useStyletron()
   return (
     <Block>
-      <HeaderNavigation
-        overrides={{
-          Root: {
-            style: {
-              backgroundColor: '#ff6600',
-            },
-          },
+      <Block
+        $style={{
+          backgroundColor: '#ff6600',
+          display: 'flex',
+          paddingBottom: theme.sizing.scale500,
+          paddingTop: theme.sizing.scale500,
+          borderBottomWidth: '1px',
+          borderBottomStyle: 'solid',
+          borderBottomColor: `${theme.colors.borderOpaque}`,
         }}
       >
         <StyledNavigationList $align={ALIGN.left}>
@@ -41,8 +44,11 @@ const NavBar: React.FC<NavBarProps> = () => {
           <StyledNavigationItem>
             <Link to="/jobs">Jobs</Link>
           </StyledNavigationItem>
+          <StyledNavigationItem>
+            <Link to="/search">Search</Link>
+          </StyledNavigationItem>
         </StyledNavigationList>
-      </HeaderNavigation>
+      </Block>
     </Block>
   )
 }

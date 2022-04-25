@@ -1,8 +1,9 @@
 type Query {
-  node(id: ID!): Node
-  topStories(after: Cursor, first: Int): StoryConnection!
-  newStories(after: Cursor, first: Int): StoryConnection!
-  askStories(after: Cursor, first: Int): StoryConnection!
-  showStories(after: Cursor, first: Int): StoryConnection!
-  jobStories(after: Cursor, first: Int): JobConnection!
+    node(id: ID!): Node
+    search(query: String!,after: Cursor, first: Int): NodeConnection!
+    topStories(after: Cursor, first: Int): StoryConnection!
+    newStories(after: Cursor, first: Int): StoryConnection!
+    askStories(after: Cursor, first: Int): StoryConnection!
+    showStories(after: Cursor, first: Int): StoryConnection!
+    jobStories(after: Cursor, first: Int): JobConnection!
 }

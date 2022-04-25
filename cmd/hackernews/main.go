@@ -59,24 +59,29 @@ func httpServer(
 ) {
 	const defaultTimeout = 15 * time.Second
 	const defaultTimeoutResponse = `{"errors": {"message": "Server timeout"}}`
+	const defaultAddr = ":8080"
 	server := &http.Server{
 		Handler: http.TimeoutHandler(router, defaultTimeout, defaultTimeoutResponse),
-		Addr:    ":8080",
+		Addr:    defaultAddr,
 	}
+
 	shutdown := func() {
+		logger.Info("shutting down http server", zap.String("addr", defaultAddr))
 		err := shutdowner.Shutdown()
 		if err != nil {
 			logger.Fatal("main: could not shutdown", zap.Error(err))
 		}
 	}
+	listen := func() {
+		logger.Info("starting up http server", zap.String("addr", defaultAddr))
+		if err := server.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
+			shutdown()
+			return
+		}
+	}
+
 	OnStart := func(context.Context) error {
-		go func() {
-			logger.Info("starting http server", zap.String("addr", ":8080"))
-			if err := server.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
-				shutdown()
-				return
-			}
-		}()
+		go listen()
 		return nil
 	}
 	OnStop := func(ctx context.Context) error {

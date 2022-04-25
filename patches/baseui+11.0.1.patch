@@ -1,0 +1,14 @@
+diff --git a/node_modules/baseui/overrides.ts b/node_modules/baseui/overrides.ts
+index 9d57041..7bb46e9 100644
+--- a/node_modules/baseui/overrides.ts
++++ b/node_modules/baseui/overrides.ts
+@@ -7,8 +7,7 @@ type StyleOverride<T> =
+   | ((props: {$theme: Theme} & React.PropsWithChildren<T>) => StyleObject);
+ 
+ type ComponentOverride<T> =
+-  | React.ComponentType<T>
+-  | React.RefForwardingComponent<T>;
++  | React.ComponentType<T>;
+ 
+ interface OverrideObject<T> {
+   component?: ComponentOverride<T>;

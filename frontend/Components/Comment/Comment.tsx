@@ -14,14 +14,15 @@ interface CommentProps {
 
 const Comment: React.FC<CommentProps> = ({ comment }: CommentProps) => {
   const [css, theme] = useStyletron()
-  const [isExpanded, setIsExpanded] = useState(true)
+  const shouldBeClosed = comment.dead || comment.deleted
+  const [isExpanded, setIsExpanded] = useState(!shouldBeClosed)
   const color = (c: string) =>
     css({
       color: c,
       cursor: 'pointer',
     })
 
-  if (comment.dead || comment.deleted || comment.type !== 'comment') {
+  if (comment.type !== 'comment') {
     // eslint-disable-next-line unicorn/no-null
     return null
   }
@@ -45,11 +46,9 @@ const Comment: React.FC<CommentProps> = ({ comment }: CommentProps) => {
                 backgroundColor: isExpanded
                   ? $theme.colors.backgroundSecondary
                   : $theme.colors.backgroundTertiary,
-                border: '2px solid transparent',
+                border: `2px solid transparent`,
+                opacity: isExpanded ? 1 : 0.5,
                 transition: 'border 0.5s ease-in-out',
-                ':hover': {
-                  border: `2px solid ${$theme.colors.borderOpaque}`,
-                },
               }
             },
           },

@@ -10,9 +10,10 @@ export interface Story {
   score: number
   time: number
   title: string
+  text: string
   type: string
   url: string
-  comments: CommentConnection
+  comments?: CommentConnection
   openGraph?: OpenGraph
   html?: string
 }
