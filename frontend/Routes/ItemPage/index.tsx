@@ -1,1 +1,2 @@
-export { ItemPage } from './ItemPage'
+import { ItemPage } from './ItemPage'
+export default ItemPage

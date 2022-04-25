@@ -2,7 +2,6 @@ import { DocumentNode, gql, useQuery } from '@apollo/client'
 import { useLocation, useSearchParams } from 'react-router-dom'
 import { Container, PaddedBlock } from '../../Components/Layout'
 import { Block } from 'baseui/block'
-import { NavBar } from '../../Components/NavBar'
 import {
   PaginatedItemCardList,
   ITEM_CARD_LIST_STORY_FIELDS,
@@ -120,7 +119,6 @@ const HomePage: React.FC = () => {
     <Fragment>
       {head}
       <Container
-        top={<NavBar />}
         left={<Block />}
         center={<InfiniteScroll query={graphqlQuery} />}
         right={<Block />}

@@ -1,7 +1,6 @@
 import { Block } from 'baseui/block'
 import { gql, useQuery } from '@apollo/client'
 import { Container } from '../../Components/Layout'
-import { NavBar } from '../../Components/NavBar'
 import { Item, ITEM_FIELDS } from '../../Components/Item'
 import { useSearchParams } from 'react-router-dom'
 import { PaddedBlock } from '../../Components/Layout'
@@ -63,7 +62,6 @@ const ItemPage: React.FC = () => {
   }
   return (
     <Container
-      top={<NavBar />}
       left={<Block />}
       center={<PaddedBlock>{children}</PaddedBlock>}
       right={<Block />}

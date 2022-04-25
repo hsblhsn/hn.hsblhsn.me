@@ -2,7 +2,6 @@ import { Grid, Cell, BEHAVIOR } from 'baseui/layout-grid'
 import { Fragment } from 'react'
 
 type ContainerProps = {
-  top: JSX.Element
   left: JSX.Element
   center: JSX.Element
   right: JSX.Element
@@ -11,7 +10,6 @@ type ContainerProps = {
 export function Container(props: ContainerProps) {
   return (
     <Fragment>
-      {props.top}
       <Grid
         behavior={BEHAVIOR.fixed}
         gridColumns={[4, 8, 12]}

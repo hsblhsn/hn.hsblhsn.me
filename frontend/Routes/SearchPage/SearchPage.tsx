@@ -1,6 +1,5 @@
 import { Block } from 'baseui/block'
 import { Container, PaddedBlock } from '../../Components/Layout'
-import { NavBar } from '../../Components/NavBar'
 import { useSearchParams } from 'react-router-dom'
 import { LoadingScreen } from './LoadingScreen'
 import { ErrorScreen } from './ErrorScreen'
@@ -15,6 +14,7 @@ import { ConnectionT, Story } from '../../Types'
 import { useStyletron } from 'baseui'
 import { FormControl } from 'baseui/form-control'
 import AwesomeDebouncePromise from 'awesome-debounce-promise'
+import { HeadingXXLarge } from 'baseui/typography'
 
 const PAGE_INFO_FIELDS = gql`
   fragment PageInfoFields on PageInfo {
@@ -127,7 +127,6 @@ const SearchPage: React.FC = () => {
   }
   return (
     <Container
-      top={<NavBar />}
       left={<Block />}
       center={
         <PaddedBlock>
@@ -146,13 +145,23 @@ interface SearchBarProps {
 }
 
 const SearchBar = ({ value, onChange }: SearchBarProps) => {
-  const [, theme] = useStyletron()
+  const [css, theme] = useStyletron()
   return (
     <Block
-      $style={{
+      className={css({
+        textAlign: 'center',
         paddingTop: theme.sizing.scale1200,
-      }}
+        paddingBottom: theme.sizing.scale1200,
+      })}
     >
+      <HeadingXXLarge
+        className={css({
+          textAlign: 'center',
+          paddingBottom: theme.sizing.scale600,
+        })}
+      >
+        Search HackerNews!
+      </HeadingXXLarge>
       <FormControl
         //label="Search HackerNews"
         caption="All search results are sorted by popularity."
@@ -162,6 +171,7 @@ const SearchBar = ({ value, onChange }: SearchBarProps) => {
           placeholder="Type to search..."
           value={value}
           onChange={(e) => onChange(e.currentTarget.value)}
+          autoFocus={true}
           overrides={{
             InputContainer: {
               style: ({ $theme }) => ({
