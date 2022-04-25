@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.9.5](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.4...v1.9.5) (2022-04-25)
+
+
+### Bug Fixes
+
+* empty author issue on dead or deleted comments. ([7e5046a](https://github.com/hsblhsn/hn.hsblhsn.me/commit/7e5046acef57915f6642e5473d4af13a6c4e0744))
+
 ### [1.9.4](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.3...v1.9.4) (2022-04-25)
 
 
