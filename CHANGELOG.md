@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.9.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.0...v1.9.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* opengraph description for search page. ([3373ce2](https://github.com/hsblhsn/hn.hsblhsn.me/commit/3373ce21237f754215fad5f173291df80f436738))
+
 ## [1.9.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.8.0...v1.9.0) (2022-04-25)
 
 
