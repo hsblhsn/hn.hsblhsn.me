@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.9.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.2...v1.9.3) (2022-04-25)
+
+
+### Bug Fixes
+
+* add default og-banner for opengraph. ([be3a8d9](https://github.com/hsblhsn/hn.hsblhsn.me/commit/be3a8d9dce02e0f8350f36197d555a1d0ddb5a30))
+
 ### [1.9.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.1...v1.9.2) (2022-04-25)
 
 
