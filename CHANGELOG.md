@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.5...v1.10.0) (2022-04-25)
+
+
+### Features
+
+* use prerender on proxy layer. ([6260d4a](https://github.com/hsblhsn/hn.hsblhsn.me/commit/6260d4a78c9178942973fd88bd3e616f0c36a68b))
+
 ### [1.9.5](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.4...v1.9.5) (2022-04-25)
 
 
