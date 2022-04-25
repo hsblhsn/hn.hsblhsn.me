@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.9.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.1...v1.9.2) (2022-04-25)
+
+
+### Bug Fixes
+
+* seo tags issue on search page. ([ab212fb](https://github.com/hsblhsn/hn.hsblhsn.me/commit/ab212fbfaefa4c2d63d76ca9084a14e5467e61b5))
+
 ### [1.9.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.0...v1.9.1) (2022-04-25)
 
 
