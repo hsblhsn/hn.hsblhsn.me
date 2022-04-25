@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.9.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.8.0...v1.9.0) (2022-04-25)
+
+
+### Features
+
+* add search route on frontend. ([4c83d40](https://github.com/hsblhsn/hn.hsblhsn.me/commit/4c83d401c4cf55483e3c5674218ca8ba1eda9567))
+* add search. ([a575040](https://github.com/hsblhsn/hn.hsblhsn.me/commit/a5750405eb0949438d408028adf4962712590358))
+
+
+### Bug Fixes
+
+* add `--legacy-peer-deps` to `npm ci` command. ([1c8abaa](https://github.com/hsblhsn/hn.hsblhsn.me/commit/1c8abaa6ca1a41e5169e4a18c8ddd7f555f89d1a))
+* docker build by copying `patches` directory. ([97eb5f5](https://github.com/hsblhsn/hn.hsblhsn.me/commit/97eb5f595079ca5e8b629705905d8eab23c49116))
+* og banner issue on AskHN pages. ([e01c937](https://github.com/hsblhsn/hn.hsblhsn.me/commit/e01c937ea23dd5703240e99fdfe15c63996b0918))
+* pagination and cursor issue in search. ([878d8c6](https://github.com/hsblhsn/hn.hsblhsn.me/commit/878d8c64721948e9b6b14a36fc544e0e904f2410))
+
 ## [1.8.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.7.5...v1.8.0) (2022-04-20)
 
 
