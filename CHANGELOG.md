@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.9.4](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.3...v1.9.4) (2022-04-25)
+
+
+### Bug Fixes
+
+* keyboard focus issue on search input. ([f0afeb4](https://github.com/hsblhsn/hn.hsblhsn.me/commit/f0afeb4940520c350844ae01bf4574530494c8e2))
+
 ### [1.9.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.2...v1.9.3) (2022-04-25)
 
 
