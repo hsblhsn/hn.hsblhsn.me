@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.6](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.5...v1.10.6) (2022-04-26)
+
+
+### Bug Fixes
+
+* double clear icon on search bar. ([81e60de](https://github.com/hsblhsn/hn.hsblhsn.me/commit/81e60de609f169f15074868a51699bef1748c39a))
+
 ### [1.10.5](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.4...v1.10.5) (2022-04-26)
 
 
