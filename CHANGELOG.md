@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.4](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.3...v1.10.4) (2022-04-26)
+
+
+### Bug Fixes
+
+* an issue where unknown typed items title were displayed as undefined. ([d0b9667](https://github.com/hsblhsn/hn.hsblhsn.me/commit/d0b966702e316e67c1d110a4e1770dc8d00945b0))
+
 ### [1.10.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.2...v1.10.3) (2022-04-26)
 
 
