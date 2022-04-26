@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.1...v1.10.2) (2022-04-26)
+
+
+### Bug Fixes
+
+* an issue where base64 images were not displayed. ([3f23260](https://github.com/hsblhsn/hn.hsblhsn.me/commit/3f2326051f62753bba08930974861d5c8f8d5082))
+
 ### [1.10.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.0...v1.10.1) (2022-04-26)
 
 
