@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.5](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.4...v1.10.5) (2022-04-26)
+
+
+### Bug Fixes
+
+* do not show any result if the query text is empty. ([c02d321](https://github.com/hsblhsn/hn.hsblhsn.me/commit/c02d321007667ab3d593228f08e3fb65b7ad4032))
+
 ### [1.10.4](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.3...v1.10.4) (2022-04-26)
 
 
