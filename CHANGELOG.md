@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.0...v1.10.1) (2022-04-26)
+
+
+### Bug Fixes
+
+* minor bugs and issues ([a6976a6](https://github.com/hsblhsn/hn.hsblhsn.me/commit/a6976a6e7b711aa9dd657468969468e1c393ba6f))
+
 ## [1.10.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.9.5...v1.10.0) (2022-04-25)
 
 
