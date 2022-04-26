@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.6...v1.11.0) (2022-04-26)
+
+
+### Features
+
+* add search query to the title of the search page. ([11f5758](https://github.com/hsblhsn/hn.hsblhsn.me/commit/11f5758fb4d486912f6ede9b96f0d8fd54f325d7))
+
 ### [1.10.6](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.5...v1.10.6) (2022-04-26)
 
 
