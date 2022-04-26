@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.10.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.2...v1.10.3) (2022-04-26)
+
+
+### Bug Fixes
+
+* an issue where comment ui were unstable when expanding and closing. ([4445d99](https://github.com/hsblhsn/hn.hsblhsn.me/commit/4445d997ab66e75e5d2427b78c2a2fbd3db94499))
+
 ### [1.10.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.1...v1.10.2) (2022-04-26)
 
 
