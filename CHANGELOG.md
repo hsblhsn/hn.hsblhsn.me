@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.11.0...v1.12.0) (2022-05-01)
+
+
+### Features
+
+* add uptime status tag to validate uptime checker response. ([3316e93](https://github.com/hsblhsn/hn.hsblhsn.me/commit/3316e93a239516fa3d71bc279097080e865e17a4))
+
 ## [1.11.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.10.6...v1.11.0) (2022-04-26)
 
 
