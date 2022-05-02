@@ -27,7 +27,7 @@
     "styletron-react": "^6.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.17.10",
     "@types/node": "^17.0.26",
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.3",
