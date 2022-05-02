@@ -12,7 +12,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.10",
+    "@apollo/client": "^3.6.1",
     "awesome-debounce-promise": "^2.1.0",
     "baseui": "^11.0.2",
     "graphql": "^16.3.0",
