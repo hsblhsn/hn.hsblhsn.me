@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.12.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.12.0...v1.12.1) (2022-05-02)
+
+
+### Bug Fixes
+
+* make item optional in item seo component. ([2011296](https://github.com/hsblhsn/hn.hsblhsn.me/commit/201129657e3c1b162a290cd328511b7689be0f2c))
+
 ## [1.12.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.11.0...v1.12.0) (2022-05-01)
 
 
