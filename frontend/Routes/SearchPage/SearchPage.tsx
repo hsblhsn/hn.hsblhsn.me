@@ -68,23 +68,23 @@ const SearchPage: React.FC = () => {
     setIsLoading(loading)
   }, [loading])
 
-  const debounced = useCallback(
+  const debouncedSearch = useCallback(
     AwesomeDebouncePromise((text: string) => {
       setResults(undefined)
       refetch({
         query: text,
       })
-    }, 500),
-    [query]
+    }, 1000),
+    [setResults, refetch]
   )
 
   // input states
   const onQueryUpdate = useCallback(
     (val: string) => {
       setQuery(val)
-      debounced(val)
+      debouncedSearch(val)
     },
-    [setQuery]
+    [setQuery, debouncedSearch]
   )
 
   const onLoadMore = useCallback(() => {
