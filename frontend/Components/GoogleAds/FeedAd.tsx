@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { Block } from 'baseui/block'
 import { useStyletron } from 'baseui'
 
+let googleAdTicker = 0
+
 interface FeedAdProps {
   layoutKey?: string
   client: string
@@ -25,9 +27,12 @@ const FeedAd: React.FC<FeedAdProps> = (props: FeedAdProps) => {
         console.error(e)
       }
     }
-
     const interval = setInterval(() => {
       console.log('checking for GoogleAds')
+      if (googleAdTicker > 15) {
+        clearInterval(interval)
+      }
+      googleAdTicker++
       const adWindow: AdWindow = window
       // Check if Adsense script is loaded every 300ms
       if (adWindow.adsbygoogle) {
