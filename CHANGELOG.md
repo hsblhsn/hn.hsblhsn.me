@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.13.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.13.0...v1.13.1) (2022-05-03)
+
+
+### Bug Fixes
+
+* minor bugs and issues ([0eb11ab](https://github.com/hsblhsn/hn.hsblhsn.me/commit/0eb11ab5fef7dbf4237d1930b0b3f5ff6a8b383f))
+
 ## [1.13.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.12.1...v1.13.0) (2022-05-02)
 
 
