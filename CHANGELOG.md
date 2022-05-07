@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.13.1...v1.14.0) (2022-05-07)
+
+
+### Features
+
+* add google ad support. ([439866f](https://github.com/hsblhsn/hn.hsblhsn.me/commit/439866fb9f67cbda702b0edd7d551b1d42bdaac5))
+
 ### [1.13.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.13.0...v1.13.1) (2022-05-03)
 
 
