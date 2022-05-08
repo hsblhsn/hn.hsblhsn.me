@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.14.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.14.1...v1.14.2) (2022-05-08)
+
+
+### Bug Fixes
+
+* look up for remote config on render. ([f8a099b](https://github.com/hsblhsn/hn.hsblhsn.me/commit/f8a099b9b18e67a36949d929bf87756b72eb306f))
+
 ### [1.14.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.14.0...v1.14.1) (2022-05-08)
 
 
