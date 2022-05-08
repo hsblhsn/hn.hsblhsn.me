@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.14.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.14.0...v1.14.1) (2022-05-08)
+
+
+### Bug Fixes
+
+* do not update query string on pagination. ([5de3502](https://github.com/hsblhsn/hn.hsblhsn.me/commit/5de35022491aee553ad9eda2a36877f88f7132c2))
+
 ## [1.14.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.13.1...v1.14.0) (2022-05-07)
 
 
