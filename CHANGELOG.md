@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.16.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.15.1...v1.16.0) (2022-05-09)
+
+
+### Features
+
+* add code highlighter in comment text. ([6d54788](https://github.com/hsblhsn/hn.hsblhsn.me/commit/6d54788dfe4c2b81f7948d94275fdfa90dba948f))
+* use hn app for links to news.ycombinator.com ([0a56e11](https://github.com/hsblhsn/hn.hsblhsn.me/commit/0a56e113a8e5733d8be13c9345b149b661869cc9))
+
 ### [1.15.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.15.0...v1.15.1) (2022-05-09)
 
 
