@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.14.2...v1.15.0) (2022-05-09)
+
+
+### Features
+
+* add ads in the article. ([a15d0f2](https://github.com/hsblhsn/hn.hsblhsn.me/commit/a15d0f2969a35293a0fa2d20ed01f397e172b805))
+
 ### [1.14.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.14.1...v1.14.2) (2022-05-08)
 
 
