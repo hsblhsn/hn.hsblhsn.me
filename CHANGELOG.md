@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.15.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.15.0...v1.15.1) (2022-05-09)
+
+
+### Bug Fixes
+
+* top margin on in-article ad ([741f72f](https://github.com/hsblhsn/hn.hsblhsn.me/commit/741f72f69c897e84a73c8ad71094416dbcb10cdd))
+
 ## [1.15.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.14.2...v1.15.0) (2022-05-09)
 
 
