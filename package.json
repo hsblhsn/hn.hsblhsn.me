@@ -14,7 +14,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.2",
     "awesome-debounce-promise": "^2.1.0",
-    "baseui": "^11.0.2",
+    "baseui": "^11.0.3",
     "graphql": "^16.3.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
