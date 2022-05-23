@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.16.0...v1.17.0) (2022-05-23)
+
+
+### Features
+
+* **deps:** bump node from 18.1.0-bullseye to 18.2.0-bullseye ([#168](https://github.com/hsblhsn/hn.hsblhsn.me/issues/168)) ([6c4a73e](https://github.com/hsblhsn/hn.hsblhsn.me/commit/6c4a73e3fa0acac2c94ec9f18b98b1485df469f2))
+
 ## [1.16.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.15.1...v1.16.0) (2022-05-09)
 
 
