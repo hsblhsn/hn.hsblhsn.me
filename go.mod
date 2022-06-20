@@ -15,11 +15,11 @@ require (
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
 	github.com/otiai10/opengraph/v2 v2.1.0
 	github.com/pkg/errors v0.9.1
-	github.com/stretchr/testify v1.7.1
-	github.com/vektah/gqlparser/v2 v2.4.2
+	github.com/stretchr/testify v1.7.3
+	github.com/vektah/gqlparser/v2 v2.4.5
 	go.uber.org/fx v1.17.1
 	go.uber.org/zap v1.21.0
-	google.golang.org/grpc v1.46.2
+	google.golang.org/grpc v1.47.0
 	google.golang.org/protobuf v1.28.0
 )
 
@@ -60,5 +60,5 @@ require (
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20220523171625-347a074981d8 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gopkg.in/yaml.v3 v3.0.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
