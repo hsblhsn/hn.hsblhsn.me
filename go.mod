@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	cloud.google.com/go/profiler v0.3.0
-	github.com/99designs/gqlgen v0.17.5
+	github.com/99designs/gqlgen v0.17.10
 	github.com/PuerkitoBio/goquery v1.8.0
 	github.com/allegro/bigcache/v3 v3.0.2
 	github.com/blendle/zapdriver v1.3.1
@@ -28,7 +28,6 @@ require (
 	cloud.google.com/go/compute v1.6.1 // indirect
 	github.com/agnivade/levenshtein v1.1.1 // indirect
 	github.com/andybalholm/cascadia v1.3.1 // indirect
-	github.com/antzucaro/matchr v0.0.0-20210222213004-b04723ef80f0 // indirect
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -44,7 +43,8 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/urfave/cli/v2 v2.8.0 // indirect
+	github.com/urfave/cli/v2 v2.8.1 // indirect
+	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	go.opencensus.io v0.23.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/dig v1.14.1 // indirect
