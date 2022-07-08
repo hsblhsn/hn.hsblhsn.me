@@ -27,3 +27,4 @@ stats.html
 bin/
 build/
 testdata/
+vendor/
