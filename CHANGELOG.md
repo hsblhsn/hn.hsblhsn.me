@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.18.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.17.0...v1.18.0) (2022-07-08)
+
+
+### Features
+
+* add event handler on comment thread border to have reddit style thread. ([8e31acf](https://github.com/hsblhsn/hn.hsblhsn.me/commit/8e31acf28363864c18f2e07760199eef9d12d6d2))
+
+
+### Bug Fixes
+
+* docker build by keeping the patches directory. ([248f4f9](https://github.com/hsblhsn/hn.hsblhsn.me/commit/248f4f96c0acc82da9473b4c3ca6d522f800c83e))
+
 ## [1.17.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.16.0...v1.17.0) (2022-05-23)
 
 
