@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.18.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.18.1...v1.18.2) (2022-07-09)
+
+
+### Bug Fixes
+
+* always return 200 ok on image endpoint. ([50f24d4](https://github.com/hsblhsn/hn.hsblhsn.me/commit/50f24d4c8c6bfc2bc19f7a106d480bf12a5a444f))
+* use smooth loader on fallback page. ([04d8627](https://github.com/hsblhsn/hn.hsblhsn.me/commit/04d8627099a79b236d8118331c524e3a66dc3789))
+
 ## [1.18.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.18.0...v1.18.1) (2022-07-08)
 
 
