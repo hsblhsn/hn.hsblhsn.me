@@ -16,7 +16,7 @@ require (
 	github.com/otiai10/opengraph/v2 v2.1.0
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.0
-	github.com/vektah/gqlparser/v2 v2.4.6
+	github.com/vektah/gqlparser/v2 v2.4.7
 	go.uber.org/fx v1.17.1
 	go.uber.org/zap v1.21.0
 	google.golang.org/grpc v1.48.0
@@ -43,21 +43,21 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/urfave/cli/v2 v2.10.3 // indirect
+	github.com/urfave/cli/v2 v2.11.1 // indirect
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	go.opencensus.io v0.23.0 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/dig v1.14.1 // indirect
 	go.uber.org/multierr v1.8.0 // indirect
 	golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4 // indirect
-	golang.org/x/net v0.0.0-20220706163947-c90051bbdb60 // indirect
-	golang.org/x/oauth2 v0.0.0-20220630143837-2104d58473e0 // indirect
-	golang.org/x/sys v0.0.0-20220708085239-5a0f0661e09d // indirect
+	golang.org/x/net v0.0.0-20220708220712-1185a9018129 // indirect
+	golang.org/x/oauth2 v0.0.0-20220718184931-c8730f7fcb92 // indirect
+	golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/tools v0.1.11 // indirect
-	google.golang.org/api v0.86.0 // indirect
+	google.golang.org/api v0.88.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/genproto v0.0.0-20220708155623-50e5f4832e73 // indirect
+	google.golang.org/genproto v0.0.0-20220720214146-176da50484ac // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
