@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.18.2...v1.18.3) (2022-07-21)
+
+
+### Bug Fixes
+
+* overflowing issue in comments. ([d7be0c3](https://github.com/hsblhsn/hn.hsblhsn.me/commit/d7be0c3cb1a0bd8138f746b2ba6992f316b8639b)), closes [#243](https://github.com/hsblhsn/hn.hsblhsn.me/issues/243)
+
 ## [1.18.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.18.1...v1.18.2) (2022-07-09)
 
 
