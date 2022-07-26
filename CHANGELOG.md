@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.18.3...v1.19.0) (2022-07-26)
+
+
+### Features
+
+* add social image preview ([#248](https://github.com/hsblhsn/hn.hsblhsn.me/issues/248)) ([5bbaa8f](https://github.com/hsblhsn/hn.hsblhsn.me/commit/5bbaa8f37bfe9fd4ea0665d283f25ad0dc4fd819))
+
 ## [1.18.3](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.18.2...v1.18.3) (2022-07-21)
 
 
