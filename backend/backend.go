@@ -1,6 +1,7 @@
 package backend
 
 import (
+	"github.com/hsblhsn/hn.hsblhsn.me/backend/images"
 	"net/http"
 
 	"github.com/99designs/gqlgen/graphql/playground"
@@ -9,7 +10,12 @@ import (
 )
 
 // RegisterRoutes registers the routes for the backend.
-func RegisterRoutes(router *mux.Router, gql *graphql.GQLHandler, img *graphql.ImageHandler) {
+func RegisterRoutes(
+	router *mux.Router,
+	gql *graphql.GQLHandler,
+	imgProxy *images.ImageProxyHandler,
+	socialPreviewHandler *images.SocialPreviewHandler,
+) {
 	router.Path("/graphql").
 		Methods(http.MethodGet, http.MethodPost).
 		Handler(gql)
@@ -19,5 +25,13 @@ func RegisterRoutes(router *mux.Router, gql *graphql.GQLHandler, img *graphql.Im
 	router.Path("/images.jpeg").
 		Methods(http.MethodGet).
 		Queries("size", "{size}", "src", "{src}").
-		Handler(img)
+		Handler(imgProxy)
+	router.Path("/images/proxy.jpeg").
+		Methods(http.MethodGet).
+		Queries("size", "{size}", "src", "{src}").
+		Handler(imgProxy)
+	router.Path("/images/social_preview.jpeg").
+		Methods(http.MethodGet).
+		Queries("title", "{title}").
+		Handler(socialPreviewHandler)
 }

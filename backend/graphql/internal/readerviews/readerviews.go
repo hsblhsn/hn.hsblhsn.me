@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	images2 "github.com/hsblhsn/hn.hsblhsn.me/backend/images"
 	"io"
 	"net/url"
 	"path"
@@ -13,7 +14,6 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/grpc/readabilityclient"
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/images"
 	"github.com/pkg/errors"
 )
 
@@ -50,7 +50,7 @@ func TransformHTML(link string, content io.Reader) (string, error) {
 			return
 		}
 		absSrc := toAbs(link, src)
-		proxied := images.ProxiedURL(absSrc, images.ImageSizeFull)
+		proxied := images2.ProxiedURL(absSrc, images2.ImageSizeFull)
 		selection.SetAttr("src", proxied)
 	})
 	doc.Find("a").Each(func(i int, selection *goquery.Selection) {

@@ -3,7 +3,8 @@ package featureflags
 import "strings"
 
 const (
-	FeatureImgProxy Feature = "image_proxy"
+	FeatureImgProxy         Feature = "image_proxy"
+	FeatureImgSocialPreview Feature = "image_social_preview"
 )
 
 type Feature string

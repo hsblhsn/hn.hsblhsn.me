@@ -12,6 +12,14 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = (props: SEOProps) => {
   const config = useContext(ConfigContext)
   let imageUrl = props.imageUrl
+  if (props.title !== '') {
+    let title = props.title
+    const trimSuffix = '| Hacker News'
+    if (props.title.endsWith(trimSuffix)) {
+      title = props.title.substring(0, props.title.length - trimSuffix.length)
+    }
+    imageUrl = `${config.host}/images/social_preview.jpeg?title=${title}`
+  }
   if (!imageUrl || imageUrl.length === 0) {
     imageUrl = `${config.host}/og-banner.jpg`
   }

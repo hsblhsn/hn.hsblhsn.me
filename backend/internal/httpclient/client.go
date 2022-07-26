@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"net/http/httputil"
 
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/caches"
+	"github.com/hsblhsn/hn.hsblhsn.me/backend/internal/caches"
 	"github.com/pkg/errors"
 	"go.uber.org/zap"
 )

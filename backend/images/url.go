@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/featureflags"
+	"github.com/hsblhsn/hn.hsblhsn.me/backend/internal/featureflags"
 )
 
 func ProxiedURL(src string, size ImageSize) string {
@@ -29,6 +29,22 @@ func ProxiedURL(src string, size ImageSize) string {
 		host,
 		unescape(escaped),
 		size,
+	)
+}
+
+func SocialPreviewURL(title string) string {
+	if !featureflags.IsOn(featureflags.FeatureImgSocialPreview, false) {
+		return ""
+	}
+	host := os.Getenv("DOMAIN")
+	if host != "" {
+		host = "https://" + host
+	}
+	escaped := url.QueryEscape(title)
+	return fmt.Sprintf(
+		"%s/social_preview.jpeg?title=%s",
+		host,
+		unescape(escaped),
 	)
 }
 

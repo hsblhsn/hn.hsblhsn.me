@@ -3,12 +3,12 @@ package model
 import (
 	"bytes"
 	"context"
+	httpclient2 "github.com/hsblhsn/hn.hsblhsn.me/backend/internal/httpclient"
 	"io"
 	"net/http"
 	"sync"
 
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/cquality"
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/httpclient"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/opengraphs"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/readerviews"
 	"github.com/pkg/errors"
@@ -17,11 +17,11 @@ import (
 
 // nolint:gochecknoglobals // global client to call from ExternalContentLoader.
 var (
-	client *httpclient.Client
+	client *httpclient2.Client
 	logger *zap.Logger
 )
 
-func registerDependencies(c *httpclient.Client, l *zap.Logger) {
+func registerDependencies(c *httpclient2.Client, l *zap.Logger) {
 	client = c
 	logger = l.With(zap.String("component", "model_external_content"))
 }
@@ -58,7 +58,7 @@ func (s *ExternalContentLoader) getContentFromURL(ctx context.Context) error {
 	var err error
 	s.once.Do(func() {
 		var resp *http.Response
-		resp, err = client.Get(ctx, s.url, httpclient.WithAcceptedContentTypes([]string{
+		resp, err = client.Get(ctx, s.url, httpclient2.WithAcceptedContentTypes([]string{
 			"text/html",
 			"text/plain",
 		}))

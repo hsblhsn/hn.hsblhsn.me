@@ -5,25 +5,25 @@ import (
 	"image/jpeg"
 	"net/http"
 
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/httpclient"
+	"github.com/hsblhsn/hn.hsblhsn.me/backend/internal/httpclient"
 	"go.uber.org/zap"
 )
 
 const quality = 85
 
-type ImageResizeHandler struct {
+type ImageProxyHandler struct {
 	client *httpclient.Client
 	logger *zap.Logger
 }
 
-func NewImageResizeHandler(client *httpclient.Client, logger *zap.Logger) *ImageResizeHandler {
-	return &ImageResizeHandler{
+func NewImageProxyHandler(client *httpclient.Client, logger *zap.Logger) *ImageProxyHandler {
+	return &ImageProxyHandler{
 		client: client,
 		logger: logger.With(zap.String("component", "images_resize_handler")),
 	}
 }
 
-func (h *ImageResizeHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
+func (h *ImageProxyHandler) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
 	// get image size from query string
 	size := ImageSize(req.URL.Query().Get("size"))
 	if size == "" {

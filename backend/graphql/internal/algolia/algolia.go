@@ -4,11 +4,11 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/hsblhsn/hn.hsblhsn.me/backend/internal/httpclient"
 	"net/http"
 	"net/url"
 	"strconv"
 
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/httpclient"
 	"github.com/pkg/errors"
 )
 

@@ -9,8 +9,6 @@ import (
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/extensions/complexity"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/extensions/timeout"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/generated"
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/httpclient"
-	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/images"
 	"github.com/hsblhsn/hn.hsblhsn.me/backend/graphql/internal/msgerr"
 	"github.com/pkg/errors"
 	"github.com/vektah/gqlparser/v2/gqlerror"
@@ -18,8 +16,7 @@ import (
 )
 
 type (
-	ImageHandler = images.ImageResizeHandler
-	GQLHandler   = handler.Server
+	GQLHandler = handler.Server
 )
 
 const (
@@ -48,11 +45,6 @@ var ComplexityMap = complexity.Map{
 	"User":                 complexityNetworkField,
 	"OpenGraph":            complexityNetworkField * 2, // nolint:gomnd
 	"PageInfo":             complexityNetworkField,
-}
-
-// NewImageHandler returns a new image proxy handler.
-func NewImageHandler(client *httpclient.Client, logger *zap.Logger) *ImageHandler {
-	return images.NewImageResizeHandler(client, logger)
 }
 
 // NewGQLHandler creates a new graphql handler.
