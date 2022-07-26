@@ -8,7 +8,7 @@ import (
 	_ "image/png"
 	"io"
 
-	"github.com/nfnt/resize"
+	"github.com/disintegration/imaging"
 	"github.com/pkg/errors"
 )
 
@@ -19,6 +19,6 @@ func Resize(content io.Reader, size ImageSize) (image.Image, error) {
 	}
 	// resize image
 	width, height := size.Dimension()
-	img = resize.Thumbnail(width, height, img, resize.NearestNeighbor)
+	img = imaging.Resize(img, int(width), int(height), imaging.Lanczos)
 	return img, nil
 }
