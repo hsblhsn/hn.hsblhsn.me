@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.19.0...v1.19.1) (2022-07-27)
+
+
+### Bug Fixes
+
+* broken image in article card. ([4346ea7](https://github.com/hsblhsn/hn.hsblhsn.me/commit/4346ea77ea12f7efdb9a51cf721e9a67932594b0))
+
 ## [1.19.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.18.3...v1.19.0) (2022-07-26)
 
 
