@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.19.1...v1.19.2) (2022-07-28)
+
+
+### Bug Fixes
+
+* broken fallback text in article ad ([a5a2f5e](https://github.com/hsblhsn/hn.hsblhsn.me/commit/a5a2f5e4bc2fee142c7fc5e661253f2cd5851e19))
+
 ## [1.19.1](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.19.0...v1.19.1) (2022-07-27)
 
 
