@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.0](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.19.2...v1.20.0) (2022-07-28)
+
+
+### Features
+
+* use new image proxy endpoint. ([6081b3d](https://github.com/hsblhsn/hn.hsblhsn.me/commit/6081b3d14e716a79cbd06967dcfbd8ac5ec2b8b2))
+
 ## [1.19.2](https://github.com/hsblhsn/hn.hsblhsn.me/compare/v1.19.1...v1.19.2) (2022-07-28)
 
 
